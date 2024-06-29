@@ -12,14 +12,12 @@
 
 <body>
   
-  <audio autoplay loop>
-    <source src="resources/audiotrack/background.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
   <div class="background"></div>
 
   <div class="launcher">
     <div class="sidebar">
+      
+    
       <div class="tab seleted active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('news')">News</div>
       <div class="tab" onclick="showTab('archive')">Archive</div>
@@ -29,10 +27,16 @@
 
     </div>
     <div class="content">
+      <audio autoplay loop>
+        <source src="resources/audiotrack/memories.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    
       <div id="home" class="tab-content active">
         
         <h1>Eclipse</h1>
         <div class="dropdown">
+          
           <label for="version-home">Select Version:</label>
           <select id="version">
             <option value="1.8.8">EaglercraftX 1.8</option>
@@ -114,6 +118,8 @@
         <p>(Me, Graham, Charlie, Luke, Aaron, Tejhas and Ayudh)</p>
         <p>And whoever made songs in my playlist that really put me in the mood</p>
         <p> (Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani) </p>
+        <p>C418 For Making Subwoofer's Lullaby (background music)</p>
+
         <h6>Thanks for helping me :) From SpeedSlicer</h6>
       </div>
     </div>
