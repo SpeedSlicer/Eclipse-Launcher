@@ -117,10 +117,10 @@ body {
   box-shadow: none;
   transition: background-color 0.3s, transform 0.3s;
   margin-top: 5px;
-  -webkit-appearance: none; /* For Safari */
-  -moz-appearance: none; /* For Firefox */
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
   position: relative;
-  z-index: 1; /* Ensure it sits above the arrow */
+  z-index: 1; 
 }
 
 .dropdown select:hover {
@@ -137,7 +137,7 @@ body {
   top: 68%;
   transform: translateY(-50%);
   pointer-events: none;
-  z-index: 2; /* Ensure arrow is on top */
+  z-index: 2; 
 }
 
 .launch-button {
