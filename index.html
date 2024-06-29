@@ -11,23 +11,26 @@
 </head>
 
 <body>
+  
   <audio autoplay loop>
-    <source src="resources/background_music.mp3" type="audio/mp3">
+    <source src="resources/audiotrack/background.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
-
   <div class="background"></div>
 
   <div class="launcher">
     <div class="sidebar">
-      <div class="tab" onclick="showTab('home')">Home</div>
+      <div class="tab seleted active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('news')">News</div>
       <div class="tab" onclick="showTab('archive')">Archive</div>
+      <div class="tab" onclick="showTab('credits')">Credits</div>
+
       <div class="tab" onclick="window.open('https://github.com/SpeedSlicer/Eclipse-Launcher')">Github</div>
 
     </div>
     <div class="content">
       <div id="home" class="tab-content active">
+        
         <h1>Eclipse</h1>
         <div class="dropdown">
           <label for="version-home">Select Version:</label>
@@ -41,8 +44,9 @@
         <button class="launch-button" onclick="launchVersion()">Launch</button>
         <div class="news-widgets">
           <h2>Latest News</h2>
+          <div class="news-item">1.1 - Background Music & Credits</div>
+
           <div class="news-item">Github Available!</div>
-          <div class="news-item">Eclipse Launcher 1.0!</div>
         </div>
       </div>
       
@@ -66,6 +70,8 @@
       <div id="news" class="tab-content">
         <h1>News</h1>
         <h4>June 2024</h4>
+                <div class="news-item">1.1 - Background Music & Credits</div>
+
         <div class="news-item">Github Available! Click Github button to access!</div>
 
         <div class="news-item">Eclipse Launcher 1.0! Animated Background, Archive, and News Tabs (6/28/2024)</div>
@@ -96,6 +102,19 @@
         <div class="news-item">Beta 0.1</div>
 
 
+      </div>
+      <div id="credits" class="tab-content">
+        <h1>Credits</h1>
+        <h3>Without these people, this project would have never existed. - SpeedSlicer</h3>
+        <p>Null/Charlie - The creator of null's world, aka the best server ever</p>
+        <p>BB123, who gave me inspiration for this project</p>
+        <p>Lax1dude, who made Eaglercraft and EaglercraftX, without him all of this would not be possible.</p>
+        <p>Everyone in BBNetwork</p>
+        <p>The Seven Idiots and Jillian</p> <p>AKA</p>
+        <p>(Me, Graham, Charlie, Luke, Aaron, Tejhas and Ayudh)</p>
+        <p>And whoever made songs in my playlist that really put me in the mood</p>
+        <p> (Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani) </p>
+        <h6>Thanks for helping me :) From SpeedSlicer</h6>
       </div>
     </div>
   </div>
