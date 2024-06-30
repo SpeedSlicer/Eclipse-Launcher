@@ -117,10 +117,10 @@ body {
   box-shadow: none;
   transition: background-color 0.3s, transform 0.3s;
   margin-top: 5px;
-  -webkit-appearance: none; 
-  -moz-appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .dropdown select:hover {
@@ -137,7 +137,7 @@ body {
   top: 68%;
   transform: translateY(-50%);
   pointer-events: none;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .launch-button {
@@ -170,10 +170,108 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 5px #000;
 }
-#news {
+
+.null-widgets {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
   overflow-y: auto;
+}
+
+.widget {
+  background-color: rgba(44, 47, 51, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  width: calc(33% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-box, .dictator-box, .project-box {
+  flex: 1;
+}
+
+.news-box h3, .dictator-box h3, .project-box h3 {
+  margin: 0 0 10px;
+}
+
+.scrollable-container {
+  max-height: calc(100vh - 200px); /* Adjust the height as needed */
+  overflow-y: auto;
+  padding: 10px;
+}
+
+
+.scrollable-container .news-item {
+  background-color: rgba(44, 47, 51, 0.9);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+.audio-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  z-index: 10;
+}
+.dictator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dictator img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.dictator p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.scrollable-container {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  scrollbar-width: thin; 
+  scrollbar-color: purple black; 
+
   scrollbar-width: thin;
   scrollbar-color: purple black;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: black;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: purple;
+  border-radius: 6px;
+  border: 3px solid black;
+}
+
+#news {
+  overflow-y: auto;
+  padding-right: 15px;
+  height: calc(100% - 40px); /* Adjust as necessary */
 }
 
 #news::-webkit-scrollbar {
@@ -188,4 +286,53 @@ body {
   background-color: purple;
   border-radius: 6px;
   border: 3px solid black;
+}
+#serverj {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-right: 15px;
+  height: calc(100% - 40px);
+}
+
+#serverj .download-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#serverj .download-buttons h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#serverj .download-buttons button {
+  padding: 12px 20px;
+  background-color: #7289da;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#serverj .download-buttons button:hover {
+  background-color: #99aab5;
+  transform: scale(1.05);
+}
+
+#serverj::-webkit-scrollbar {
+  width: 12px;
+}
+
+#serverj::-webkit-scrollbar-track {
+  background: #000;
+}
+
+#serverj::-webkit-scrollbar-thumb {
+  background-color: #7289da;
+  border-radius: 6px;
+  border: 3px solid #000;
 }

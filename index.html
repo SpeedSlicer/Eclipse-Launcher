@@ -6,55 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eclipse</title>
   <link rel="stylesheet" href="styles.css">
- 
   <script src="script.js"></script>
+  <audio autoplay loop>
+    <source src="resources/audiotrack/memories.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </head>
 
 <body>
-  
-  <div class="background"></div>
 
+  <div class="background">
+    
+  </div>
   <div class="launcher">
     <div class="sidebar">
-      
-    
-      <div class="tab seleted active-tab" onclick="showTab('home')">Home</div>
+      <div class="tab selected active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('news')">News</div>
       <div class="tab" onclick="showTab('archive')">Archive</div>
+      <div class="tab" onclick="showTab('null')">Null's World</div>
       <div class="tab" onclick="showTab('credits')">Credits</div>
-
+      <div class="tab" onclick="showTab('serverj')">Servers/Server Jars</div>
       <div class="tab" onclick="window.open('https://github.com/SpeedSlicer/Eclipse-Launcher')">Github</div>
-
     </div>
     <div class="content">
-      <audio autoplay loop>
-        <source src="resources/audiotrack/memories.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-    
+
       <div id="home" class="tab-content active">
-        
         <h1>Eclipse</h1>
         <div class="dropdown">
-          
           <label for="version-home">Select Version:</label>
-          <select id="version">
+          <select id="version-home">
             <option value="1.8.8">EaglercraftX 1.8</option>
-            <option value="eaglerforge">EaglerForge</option>
-            <option value="1.9">EaglerL 1.9 Snapshot 0.5</option>
+            <option value="forge">EaglerForge</option>
+            <option value="1.9.4">EaglerL 1.9 Snapshot 0.5</option>
           </select>
         </div>
-        
         <button class="launch-button" onclick="launchVersion()">Launch</button>
         <div class="news-widgets">
           <h2>Latest News</h2>
+          <div class="news-item">1.2 Update: Randomized Themes & Music, Server Jar & Nulls World Sections</div>
+
           <div class="news-item">1.1 - Background Music & Credits</div>
-
-          <div class="news-item">Github Available!</div>
         </div>
-
       </div>
-      
+
       <div id="archive" class="tab-content">
         <h1>Eaglercraft Archive</h1>
         <div class="dropdown">
@@ -71,58 +65,108 @@
         </div>
         <button class="launch-button" onclick="launchArchive()">Launch</button>
       </div>
+
       <div id="news" class="tab-content">
         <h1>News</h1>
         <h4>June 2024</h4>
-                <div class="news-item">1.1 - Background Music & Credits</div>
+        <div class="news-item">1.2 Update: Randomized Themes & Music, Credits Restyle, Server Jar & Nulls World Sections</div>
 
+        <div class="news-item">1.1 - Background Music & Credits</div>
         <div class="news-item">Github Available! Click Github button to access!</div>
-
         <div class="news-item">Eclipse Launcher 1.0! Animated Background, Archive, and News Tabs (6/28/2024)</div>
         <div class="news-item">Eaglercraft U35! U35 brings fixes to Dynamic Lighting</div>
-
         <div class="news-item">Beta 0.9</div>
         <div class="news-item">Beta 0.8.2</div>
         <div class="news-item">Beta 0.8.1</div>
         <div class="news-item">Beta 0.8</div>
         <div class="news-item">Beta 0.7</div>
         <div class="news-item">Beta 0.6.3</div>
-
         <div class="news-item">Beta 0.6.2</div>
-
         <div class="news-item">Beta 0.6.1</div>
-
         <div class="news-item">Beta 0.6</div>
         <div class="news-item">Beta 0.5.1</div>
-
         <div class="news-item">Beta 0.5</div>
         <div class="news-item">Beta 0.4</div>
         <div class="news-item">Beta 0.3</div>
         <div class="news-item">Beta 0.2</div>
         <div class="news-item">Beta 0.1.2</div>
-
         <div class="news-item">Beta 0.1.1</div>
-
         <div class="news-item">Beta 0.1</div>
-
-
       </div>
+
+      <div id="null" class="tab-content">
+        <h1>Null's World</h1>
+        <div class="null-widgets">
+          <div class="widget news-box">
+            <h3>News</h3>
+            <div class="scrollable-container">
+              <div class="news-item">Summer has started, Null's World is mostly inactive</div>
+              <div class="news-item">Underground College is done!</div>
+              <div class="news-item">Urbunization has started! Military Application is Available!</div>
+              <div class="news-item">Moved limit from 8 Members to 100!</div>
+              <div class="news-item">Null's World is Down for the Week</div>
+              <div class="news-item">Bedworld was blown up!</div>
+            </div>
+          </div>
+          <div class="widget dictator-box">
+            <h3>Fool of the Day/Week/Month/Decade/Always</h3>
+            <div class="dictator">
+              <img src="https://mineskin.eu/helm/null/100.png" alt="Dictator Skin">
+              <p>AF12</p>
+            </div>
+          </div>
+          <div class="widget project-box">
+            <h3>Current Project</h3>
+            <p>Enjoying Summer!</p>
+          </div>
+        </div>
+      </div>
+
       <div id="credits" class="tab-content">
-        <h1>Credits</h1>
-        <h3>Without these people, this project would have never existed. - SpeedSlicer</h3>
-        <p>Null/Charlie - The creator of null's world, aka the best server ever</p>
-        <p>BB123, who gave me inspiration for this project</p>
-        <p>Lax1dude, who made Eaglercraft and EaglercraftX, without him all of this would not be possible.</p>
-        <p>Everyone in BBNetwork</p>
-        <p>The Seven Idiots and Jillian</p> <p>AKA</p>
-        <p>(Me, Graham, Charlie, Luke, Aaron, Tejhas and Ayudh)</p>
-        <p>And whoever made songs in my playlist that really put me in the mood</p>
-        <p> (Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani) </p>
-        <p>C418 For Making Subwoofer's Lullaby (background music)</p>
+        <div class="news-item">Here is a list of people who have made this project possible!</div>
+        <div class="news-item">Site Made By SpeedSlicer</div>
 
-        <h6>Thanks for helping me :) From SpeedSlicer</h6>
+        <div class="news-item">Each one of people listed here played a crucial part in the development of this project!</div>
+        <div class="scrollable-container">
+          <h1>Credits</h1>
+          <p>Null - The creator of null's world, aka the best server ever</p>
+          <p>BB123, who gave me inspiration for this project</p>
+          <p>Lax1dude, who made Eaglercraft and EaglercraftX, without him all of this would not be possible.</p>
+          <p>Radman and Otterdev for EaglerForge</p>
+          <p>HoosierTransfer for Making EaglercraftL 1.9</p>
+          <p>Everyone in BBNetwork</p>
+          <p>The Seven Idiots and Jillian</p> <p>AKA</p>
+          <p>(Me, AF12, null, CreeperAwman, Aaron, DaBlackDetective and IAMTHEKING)</p>
+          <p>And whoever made songs in my playlist that really put me in the mood</p>
+          <p>(Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani)</p>
+          <p>C418 For Making Subwoofer's Lullaby (background music)</p>
+          <h6>Thanks for helping me :) From SpeedSlicer</h6>
+        </div>
+       
       </div>
+
+      <div id="serverj" class="tab-content">
+        <h1>Server Jars</h1>
+        <div class="download-buttons">
+          <h3>EaglercraftX 1.8</h3>
+          <button onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/EaglerXBungee-1.2.6.jar')">Download Latest EaglerXBungee</button>
+          <button onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/EaglerXVelocity-1.0.5.jar')">Download Latest EaglerXVelocity</button>
+          <button onclick="window.open('https://archive.eaglercraft.rip/EaglercraftX_1.8/server/')">View Archive</button>
+          <h3>Eaglercraft 1.5</h3>
+          <button onclick="window.open('https://archive.eaglercraft.rip/Eaglercraft_1.5/server/')">View Archive</button>
+          <h3>Eaglercraft Beta 1.3</h3>
+          <button onclick="window.open('https://archive.eaglercraft.rip/Eaglercraft_b1.3/server/22w22a/')">Download Server</button>
+          <h3>EaglercraftL 1.9</h3>
+          <button onclick="window.open('https://git.zelz.net/Eagler-Lambda/hoosiertransfer-mod/releases/download/v0.5.0/ViaRewind-Eagler-Lambda-4.0.0.jar')">Download Custom ViaRewind</button>
+        </div>
+      </div>
+      
+
     </div>
+  </div>
+
+  <div class="audio-widget">
+    Now Playing Subwoofer's Lullaby - C418
   </div>
 
 </body>
