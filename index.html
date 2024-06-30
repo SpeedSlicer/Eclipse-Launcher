@@ -7,18 +7,13 @@
   <title>Eclipse</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
-  <audio autoplay loop>
-    <source src="resources/audiotrack/memories.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
 </head>
 
 <body>
+  <div class="background"></div>
 
-  <div class="background">
-    
-  </div>
   <div class="launcher">
+    
     <div class="sidebar">
       <div class="tab selected active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('news')">News</div>
@@ -29,7 +24,7 @@
       <div class="tab" onclick="window.open('https://github.com/SpeedSlicer/Eclipse-Launcher')">Github</div>
     </div>
     <div class="content">
-
+      <!-- Home Tab -->
       <div id="home" class="tab-content active">
         <h1>Eclipse</h1>
         <div class="dropdown">
@@ -44,15 +39,15 @@
         <div class="news-widgets">
           <h2>Latest News</h2>
           <div class="news-item">1.2 Update: Randomized Themes & Music, Server Jar & Nulls World Sections</div>
-
           <div class="news-item">1.1 - Background Music & Credits</div>
         </div>
       </div>
 
+      <!-- Archive Tab -->
       <div id="archive" class="tab-content">
         <h1>Eaglercraft Archive</h1>
         <div class="dropdown">
-          <label for="version-home">Archived Versions:</label>
+          <label for="archiveVer">Archived Versions:</label>
           <select id="archiveVer">
             <option value="1.5.2">Eaglercraft 1.5.2</option>
             <option value="b1.7.3">Beta 1.7.3</option>
@@ -66,11 +61,11 @@
         <button class="launch-button" onclick="launchArchive()">Launch</button>
       </div>
 
+      <!-- News Tab -->
       <div id="news" class="tab-content">
         <h1>News</h1>
         <h4>June 2024</h4>
         <div class="news-item">1.2 Update: Randomized Themes & Music, Credits Restyle, Server Jar & Nulls World Sections</div>
-
         <div class="news-item">1.1 - Background Music & Credits</div>
         <div class="news-item">Github Available! Click Github button to access!</div>
         <div class="news-item">Eclipse Launcher 1.0! Animated Background, Archive, and News Tabs (6/28/2024)</div>
@@ -94,6 +89,7 @@
         <div class="news-item">Beta 0.1</div>
       </div>
 
+      <!-- Null's World Tab -->
       <div id="null" class="tab-content">
         <h1>Null's World</h1>
         <div class="null-widgets">
@@ -122,10 +118,10 @@
         </div>
       </div>
 
+      <!-- Credits Tab -->
       <div id="credits" class="tab-content">
         <div class="news-item">Here is a list of people who have made this project possible!</div>
         <div class="news-item">Site Made By SpeedSlicer</div>
-
         <div class="news-item">Each one of people listed here played a crucial part in the development of this project!</div>
         <div class="scrollable-container">
           <h1>Credits</h1>
@@ -135,16 +131,17 @@
           <p>Radman and Otterdev for EaglerForge</p>
           <p>HoosierTransfer for Making EaglercraftL 1.9</p>
           <p>Everyone in BBNetwork</p>
-          <p>The Seven Idiots and Jillian</p> <p>AKA</p>
+          <p>The Seven Idiots and Jillian</p> 
+          <p>AKA</p>
           <p>(Me, AF12, null, CreeperAwman, Aaron, DaBlackDetective and IAMTHEKING)</p>
           <p>And whoever made songs in my playlist that really put me in the mood</p>
           <p>(Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani)</p>
           <p>C418 For Making Subwoofer's Lullaby (background music)</p>
           <h6>Thanks for helping me :) From SpeedSlicer</h6>
         </div>
-       
       </div>
 
+      <!-- Server Jars Tab -->
       <div id="serverj" class="tab-content">
         <h1>Server Jars</h1>
         <div class="download-buttons">
@@ -160,15 +157,11 @@
           <button onclick="window.open('https://git.zelz.net/Eagler-Lambda/hoosiertransfer-mod/releases/download/v0.5.0/ViaRewind-Eagler-Lambda-4.0.0.jar')">Download Custom ViaRewind</button>
         </div>
       </div>
-      
-
     </div>
   </div>
 
-  <div class="audio-widget">
-    Now Playing Subwoofer's Lullaby - C418
-  </div>
 
+  
 </body>
 
 </html>
