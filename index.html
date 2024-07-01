@@ -10,36 +10,42 @@
 </head>
 
 <body>
-  <div class="background"></div>
+  <div class="background" id="background"></div>
 
   <div class="launcher">
-    
     <div class="sidebar">
       <div class="tab selected active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('news')">News</div>
       <div class="tab" onclick="showTab('archive')">Archive</div>
-      <div class="tab" onclick="showTab('null')">Null's World</div>
-      <div class="tab" onclick="showTab('credits')">Credits</div>
       <div class="tab" onclick="showTab('serverj')">Servers/Server Jars</div>
-      <div class="tab" onclick="window.open('https://github.com/SpeedSlicer/Eclipse-Launcher')">Github</div>
+      <div class="tab" onclick="showTab('null')">Null's World</div>
+
+      <div class="tab" onclick="showTab('external')">Serverlist</div>
+      <div class="tab" onclick="showTab('credits')">Credits</div>
+
+      <div class="tab" onclick="showTab('settings')">Settings</div>
+      <div class="tab" onclick="window.open('https://discord.gg/Bj7MNg7kXP')">Discord</div>
     </div>
     <div class="content">
       <!-- Home Tab -->
       <div id="home" class="tab-content active">
-        <h1>Eclipse</h1>
+        <h1>Welcome to Eclipse</h1>
         <div class="dropdown">
           <label for="version-home">Select Version:</label>
           <select id="version-home">
             <option value="1.8.8">EaglercraftX 1.8</option>
             <option value="forge">EaglerForge</option>
             <option value="1.9.4">EaglerL 1.9 Snapshot 0.5</option>
+            <option value="bettereag">BetterEagler</option>
+            <option value="justin">Justin Client</option>
+            <option value="reborn">EaglerReborn</option>
+
           </select>
         </div>
         <button class="launch-button" onclick="launchVersion()">Launch</button>
         <div class="news-widgets">
           <h2>Latest News</h2>
-          <div class="news-item">1.2 Update: Randomized Themes & Music, Server Jar & Nulls World Sections</div>
-          <div class="news-item">1.1 - Background Music & Credits</div>
+          <div class="news-item">Beta 0.1 - Initial Release</div>
         </div>
       </div>
 
@@ -65,31 +71,25 @@
       <div id="news" class="tab-content">
         <h1>News</h1>
         <h4>June 2024</h4>
-        <div class="news-item">1.2 Update: Randomized Themes & Music, Credits Restyle, Server Jar & Nulls World Sections</div>
-        <div class="news-item">1.1 - Background Music & Credits</div>
-        <div class="news-item">Github Available! Click Github button to access!</div>
-        <div class="news-item">Eclipse Launcher 1.0! Animated Background, Archive, and News Tabs (6/28/2024)</div>
-        <div class="news-item">Eaglercraft U35! U35 brings fixes to Dynamic Lighting</div>
-        <div class="news-item">Beta 0.9</div>
-        <div class="news-item">Beta 0.8.2</div>
-        <div class="news-item">Beta 0.8.1</div>
-        <div class="news-item">Beta 0.8</div>
-        <div class="news-item">Beta 0.7</div>
-        <div class="news-item">Beta 0.6.3</div>
-        <div class="news-item">Beta 0.6.2</div>
-        <div class="news-item">Beta 0.6.1</div>
-        <div class="news-item">Beta 0.6</div>
-        <div class="news-item">Beta 0.5.1</div>
-        <div class="news-item">Beta 0.5</div>
-        <div class="news-item">Beta 0.4</div>
-        <div class="news-item">Beta 0.3</div>
-        <div class="news-item">Beta 0.2</div>
-        <div class="news-item">Beta 0.1.2</div>
-        <div class="news-item">Beta 0.1.1</div>
-        <div class="news-item">Beta 0.1</div>
+        <div class="news-item">Beta 0.1 - Switched Theme of Eclipse for UEC</div>
       </div>
 
-      <!-- Null's World Tab -->
+      <!-- Credits Tab -->
+      <div id="credits" class="tab-content">
+        <h1>Credits</h1>
+        <p>Here is a list of people who have made this project possible:</p>
+        <ul>
+          <li>Devs: SpeedSlicer (Shaun), BB123, Ponk, Fr3ddy, and Twizzler</li>
+        </ul>
+       
+        <!-- Sponsor Section -->
+        <h2>Sponsors</h2>
+        <p>Special thanks to our sponsors who support this project:</p>
+        <ul>
+          <li>BBNetwork: <a href="https://discord.gg/DSwNy2Bucd">Discord</a></li>
+          <li>Water Network: <a href="https://discord.waternetwork.xyz/">Discord</a></li>
+        </ul>
+      </div>
       <div id="null" class="tab-content">
         <h1>Null's World</h1>
         <div class="null-widgets">
@@ -117,30 +117,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Credits Tab -->
-      <div id="credits" class="tab-content">
-        <div class="news-item">Here is a list of people who have made this project possible!</div>
-        <div class="news-item">Site Made By SpeedSlicer</div>
-        <div class="news-item">Each one of people listed here played a crucial part in the development of this project!</div>
-        <div class="scrollable-container">
-          <h1>Credits</h1>
-          <p>Null - The creator of null's world, aka the best server ever</p>
-          <p>BB123, who gave me inspiration for this project</p>
-          <p>Lax1dude, who made Eaglercraft and EaglercraftX, without him all of this would not be possible.</p>
-          <p>Radman and Otterdev for EaglerForge</p>
-          <p>HoosierTransfer for Making EaglercraftL 1.9</p>
-          <p>Everyone in BBNetwork</p>
-          <p>The Seven Idiots and Jillian</p> 
-          <p>AKA</p>
-          <p>(Me, AF12, null, CreeperAwman, Aaron, DaBlackDetective and IAMTHEKING)</p>
-          <p>And whoever made songs in my playlist that really put me in the mood</p>
-          <p>(Keneshi Yonezu, Eve, Who-ya, Boy Hero, King GNU, and Tatsuya Kitani)</p>
-          <p>C418 For Making Subwoofer's Lullaby (background music)</p>
-          <h6>Thanks for helping me :) From SpeedSlicer</h6>
-        </div>
-      </div>
-
       <!-- Server Jars Tab -->
       <div id="serverj" class="tab-content">
         <h1>Server Jars</h1>
@@ -157,11 +133,28 @@
           <button onclick="window.open('https://git.zelz.net/Eagler-Lambda/hoosiertransfer-mod/releases/download/v0.5.0/ViaRewind-Eagler-Lambda-4.0.0.jar')">Download Custom ViaRewind</button>
         </div>
       </div>
+
+      <!-- Settings Tab -->
+      <div id="settings" class="tab-content">
+        <h1>Settings</h1>
+        <div class="dropdown">
+          <label for="theme-select">Select Theme:</label>
+          <select id="theme-select" onchange="changeTheme(this.value)">
+            <option value="garden">Overworld</option>
+            <option value="otherside">Nether</option>
+            <option value="sweden">End</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- External Servers Tab -->
+      <div id="external" class="tab-content">
+        <h1>External Servers</h1>
+        <iframe src="https://servers.eaglercraft.com/" width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+      
     </div>
   </div>
-
-
-  
 </body>
 
 </html>

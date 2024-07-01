@@ -38,19 +38,61 @@ function showTab(tabId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // List of background images
-    const backgrounds = [
-      "resources/backgrounds/minecraft.gif",
-      "resources/backgrounds/sweden.gif",
-      "resources/backgrounds/otherside.gif"
-    ];
+    // List of themes and their background images
+    const themes = {
+        garden: "resources/backgrounds/garden.gif",
+        sweden: "resources/backgrounds/sweden.gif",
+        otherside: "resources/backgrounds/otherside.gif"
+    };
 
-    // Randomly select a background
-    const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    // Get the selected theme from the cookie
+    const selectedTheme = getCookie("theme") || "garden";
 
-    // Set the background image
-    document.querySelector('.background').style.backgroundImage = `url(${randomBackground})`;
+    // Set the initial background based on the selected theme
+    document.querySelector('.background').style.backgroundImage = `url(${themes[selectedTheme]})`;
 
+    // Set the dropdown to the selected theme
+    document.getElementById('theme-select').value = selectedTheme;
 });
 
+function changeTheme(theme) {
+    // List of themes and their background images
+    const themes = {
+        garden: "resources/backgrounds/garden.gif",
+        sweden: "resources/backgrounds/sweden.gif",
+        otherside: "resources/backgrounds/otherside.gif"
+    };
+
+    // Change the background image
+    document.querySelector('.background').style.backgroundImage = `url(${themes[theme]})`;
+
+    // Store the selected theme in a cookie
+    setCookie("theme", theme, 30);
+}
+
+// Utility function to set a cookie
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Utility function to get a cookie value by name
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+    return null;
+}
