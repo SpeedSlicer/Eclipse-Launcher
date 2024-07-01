@@ -292,7 +292,8 @@ body {
 }
 
 #settings {
-  overflow: hidden;
+  overflow-y: auto;
+
 }
 
 #settings .dropdown {
@@ -310,6 +311,23 @@ body {
 
 #settings .dropdown select:hover {
   background-color: var(--lighter-color);
+}
+#settings::-webkit-scrollbar {
+  width: 12px; 
+}
+
+#settings::-webkit-scrollbar-track {
+  background: var(--base-color); 
+}
+
+#settings::-webkit-scrollbar-thumb {
+  background-color: var(--base-color);
+  border-radius: 6px; 
+  border: 3px solid var(--lighter-color); 
+}
+
+#settings::-webkit-scrollbar-thumb:hover {
+  background-color: var(--base-color)
 }
 
 .color-picker-wrapper {
