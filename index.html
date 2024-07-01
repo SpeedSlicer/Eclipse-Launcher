@@ -17,7 +17,6 @@
       <div class="tab selected active-tab" onclick="showTab('home')">Home</div>
       <div class="tab" onclick="showTab('archive')">Archive</div>
       <div class="tab" onclick="showTab('serverj')">Servers/Server Jars</div>
-      <div class="tab" onclick="showTab('null')">Null's World</div>
 
       <div class="tab" onclick="showTab('external')">Serverlist</div>
       <div class="tab" onclick="showTab('credits')">Credits</div>
@@ -28,7 +27,7 @@
     <div class="content">
       <!-- Home Tab -->
       <div id="home" class="tab-content active">
-        <h1>Welcome to Eclipse</h1>
+        <h1 id="home-page-text">Welcome to Eclipse</h1>
         <div class="dropdown">
           <label for="version-home">Select Version:</label>
           <select id="version-home">
@@ -70,6 +69,9 @@
       <!-- News Tab -->
       <div id="news" class="tab-content">
         <h1>News</h1>
+        <h4>July 2024</h4>
+        <div class="news-item">1.4 - More background</div>
+
         <h4>June 2024</h4>
         <div class="news-item">1.3 - Updated Textures</div>
         <div class="news-item">1.2 - Backgrounds</div>
@@ -91,33 +93,7 @@
        
     
       </div>
-      <div id="null" class="tab-content">
-        <h1>Null's World</h1>
-        <div class="null-widgets">
-          <div class="widget news-box">
-            <h3>News</h3>
-            <div class="scrollable-container">
-              <div class="news-item">Summer has started, Null's World is mostly inactive</div>
-              <div class="news-item">Underground College is done!</div>
-              <div class="news-item">Urbunization has started! Military Application is Available!</div>
-              <div class="news-item">Moved limit from 8 Members to 100!</div>
-              <div class="news-item">Null's World is Down for the Week</div>
-              <div class="news-item">Bedworld was blown up!</div>
-            </div>
-          </div>
-          <div class="widget dictator-box">
-            <h3>Fool of the Day/Week/Month/Decade/Always</h3>
-            <div class="dictator">
-              <img src="https://mineskin.eu/helm/null/100.png" alt="Dictator Skin">
-              <p>AF12</p>
-            </div>
-          </div>
-          <div class="widget project-box">
-            <h3>Current Project</h3>
-            <p>Enjoying Summer!</p>
-          </div>
-        </div>
-      </div>
+     
       <!-- Server Jars Tab -->
       <div id="serverj" class="tab-content">
         <h1>Server Jars</h1>
@@ -139,15 +115,61 @@
       <div id="settings" class="tab-content">
         <h1>Settings</h1>
         <div class="dropdown">
-          <label for="theme-select">Select Theme:</label>
+          <label for="theme-select">Select Background:</label>
           <select id="theme-select" onchange="changeTheme(this.value)">
-            <option value="garden">Overworld</option>
-            <option value="otherside">Nether</option>
-            <option value="sweden">End</option>
+            <option value="overworld">Overworld</option>
+            <option value="nether">Nether</option>
+            <option value="end">End</option>
+            <option value="cherryblossom">Cherry Blossom</option>
+            <option value="city">City</option>
+            <option value="colosseum">Colosseum</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="office">Office</option>
+            <option value="snowstorm">Snowstorm</option>
+            <option value="starfall">Starfall</option>
+            <option value="room">Room</option>
+            <option value="retro">Retro</option>
+            <option value="redmoon">Red Moon</option>
+
           </select>
         </div>
-      </div>
+      
+        <div class="color-picker-wrapper">
+          <div class="color-picker">
+            <label for="base-color-picker">Button/Dropdown Color</label>
+            <input type="color" id="base-color-picker" value="#6e6e6e">
+          </div>
+          <div class="color-picker">
+            <label for="darker-color-picker">Bar/Widget Color</label>
+            <input type="color" id="darker-color-picker" value="#5c5c5c">
+          </div>
+          <div class="color-picker">
+            <label for="lighter-color-picker">Highlighted Color</label>
+            <input type="color" id="lighter-color-picker" value="#7f7f7f">
+          </div>
+          <div class="color-picker">
+            <label for="highlight-color-picker">Tint Color</label>
+            <input type="color" id="highlight-color-picker" value="#a3a3a3">
+          </div>
+          <div class="color-picker">
+            <label for="shadow-color-picker">Button Outline Color</label>
+            <input type="color" id="shadow-color-picker" value="#4b4b4b">
+          </div>
+          <div class="color-picker">
+            <label for="text-color-picker">Text Color</label>
+            <input type="color" id="text-color-picker" value="#ffffff">
+          </div>
+          <div class="color-picker">
+            <label for="background-color-picker">Background Color</label>
+            <input type="color" id="background-color-picker" value="#1e1e1e">
+        </div>
+        <button id="reset-defaults-button" onClick="resetToDefaults()">Reset to Default</button>
 
+        </div>
+
+      
+        
+      </div>
       <!-- External Servers Tab -->
       <div id="external" class="tab-content">
         <h1>External Servers</h1>
