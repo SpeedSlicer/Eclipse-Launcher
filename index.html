@@ -85,11 +85,14 @@
         <h1>Credits</h1>
         <p>Here is a list of people who have made this project possible:</p>
         <ul>
-          <li>Lax1dude, who made Eaglercraft
-            Everyone who made clients
-            SpeedSlicer, who made the launcher
-          </li>
-        </ul>
+          <li>Lax1dude, who made Eaglercraft</li>
+           <li>The Eaglerforge, EaglerReborn, and Hooisertransfer for their clients.</li>
+           <li>Eaglerserverlist Team who made the Serverlist</li>
+
+           <li>SpeedSlicer (Me) Who made this project</li>
+           <li>You, who kept me going.</li>
+
+          </ul>
        
     
       </div>
@@ -164,6 +167,19 @@
             <input type="color" id="background-color-picker" value="#1e1e1e">
         </div>
         <button id="reset-defaults-button" onClick="resetToDefaults()">Reset to Default</button>
+        <br>
+        <h2>Preset Themes</h2>
+        <div class="button-container">
+          <button class="button" onclick="customPreset('#6e6e6e', '#5c5c5c', '#7f7f7f', '#a3a3a3', '#4b4b4b', '#ffffff', '#1e1e1e', 'overworld');">Casual</button>
+
+          <button class="button" onclick="customPreset('#700000', '#4f0c0c', '#230b0b', '#a3a3a3', '#000000', '#ffffff', '#000000', 'redmoon')">Red Moon</button>
+          <button class="button" onclick="customPreset('#521169', '#28013b', '#6b1084', '#a3a3a3', '#f9d7d7', '#ffffff', '#030635','cyberpunk' );">Cyberpunk</button>
+          <button class="button" onclick="customPreset('#9267eb', '#080044', '#131872', '#a3a3a3', '#12146b', '#ffffff', '#060043', 'starfall');">Starfall</button>
+          <button class="button" onclick="customPreset('#ca3f69', '#23688b', '#921758', '#a3a3a3', '#f7f7f7', '#ffffff', '#24567b', 'cherryblossom');">Cherry Blossom</button>
+          <button class="button" onclick="customPreset('#402682', '#3d5089', '#40558f', '#a3a3a3', '#6291c5', '#ffffff', '#4e1a65', 'snowstorm');">Snowy Peaks</button>
+
+        </div>
+          <button onclick="copyCustomPreset()" class="button">Copy Custom Preset</button>
 
         </div>
 

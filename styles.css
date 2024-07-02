@@ -361,3 +361,24 @@ body {
   background-color: #ff7f50;
   transform: translateY(-2px);
 }
+.button {
+  padding: 10px 20px;
+  background-color: var(--base-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: var(--lighter-color);
+  transform: translateY(-2px);
+}
+.button-container {
+  display: flex; /* Use flexbox to align buttons */
+  gap: 10px; /* Adjust the gap between buttons */
+  justify-content: center; /* Center align the buttons horizontally */
+}
